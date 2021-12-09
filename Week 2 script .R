@@ -12,3 +12,4 @@ stepsday <- aggregate(steps ~ date, activity, FUN = mean)
 #make a histogram
 ggplot(stepsday, aes(x=steps)) +
 geom_histogram()
+
