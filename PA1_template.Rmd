@@ -25,7 +25,7 @@ activity <-fread("./activity.csv")
 
 #What is mean total number of steps taken per day?
 Calculate the total number of steps taken per day
-```{r}
+```{r histogram total steps per day}
 #calculate mean steps per day by aggregating
 totalstepsday <-  aggregate(steps ~ date, activity, FUN = sum)
 
@@ -52,7 +52,7 @@ totalstepsday %>% summarize(median(steps))
 
 #What is the average daily activity pattern?
 
-```{r}
+```{r time series mean steps 5 minute interval na}
 library(lubridate)
 
 #Make a time series plot (i.e. type = "l"\color{red}{\verb|type = "l"|}type = "l") of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all days (y-axis)
@@ -103,7 +103,7 @@ activity_2 <- activity %>%
 summary(is.na(activity_2$steps))
 ```
 
-```{r}
+```{r total steps per day imputed}
 #Make a histogram of the total number of steps taken each day and Calculate and report the mean and median total number of steps taken per day. Do these values differ from the estimates from the first part of the assignment? What is the impact of imputing missing data on the estimates of the total daily number of steps?
 
 #calculate mean steps per day by aggregating
@@ -150,7 +150,7 @@ table(activity_2$week)
 table(activity_2$weekday)
 ```
 
-```{r}
+```{r time series per weekday or weekend}
 #Make a panel plot containing a time series plot (i.e. type = "l"\color{red}{\verb|type = "l"|}type = "l") of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all weekday days or weekend days (y-axis). See the README file in the GitHub repository to see an example of what this plot should look like using simulated data.
 
 #average steps per interval and make two plots for weekend and weekdays
