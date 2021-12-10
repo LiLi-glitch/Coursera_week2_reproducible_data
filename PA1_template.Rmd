@@ -1,6 +1,8 @@
 ---
 title: "Week2_reproducible_research"
-output: html_document
+output: 
+  html_document:
+    keep_md: true
 ---
 
 ```{r global_options}
