@@ -33,6 +33,8 @@ totalstepsday <-  aggregate(steps ~ date, activity, FUN = sum)
 ggplot(totalstepsday, aes(x=steps)) +
 geom_histogram()
 
+
+
 ```
 
 ```{r}
